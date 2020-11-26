@@ -26,4 +26,19 @@ function generateData(data){
   let milliSeconds = currentDate.getTime() - dateOfBirth.getTime();
   // console.log(currentDate.getTime(), dateOfBirth.getTime(), milliSeconds);
   document.getElementById('milliSecondsElapsed').innerHTML = milliSeconds;
+
+  let seconds = parseInt(milliSeconds / 1000);
+  document.getElementById('secondsElapsed').innerHTML = seconds;
+  let minutes = parseInt(seconds / 60);
+  document.getElementById('minutesElapsed').innerHTML = minutes;
+  let hours =parseInt( minutes / 60);
+  document.getElementById('hoursElapsed').innerHTML = hours;
+  let days = parseInt(hours / 60);
+  document.getElementById('daysElapsed').innerHTML = days;
+  let months = parseInt(days/12);
+  document.getElementById('monthsElapsed').innerHTML = months;
+  let years = parseInt(days/365);
+  document.getElementById('yearsElapsed').innerHTML = years;
+
+
 }
