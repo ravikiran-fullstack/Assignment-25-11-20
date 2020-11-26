@@ -1,0 +1,25 @@
+/* table{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px dotted red;
+} */
+table{
+  width: 100%;
+}
+
+table, td { 
+  border: 2px solid black; 
+  text-align:center; 
+} 
+
+td { 
+  padding: 20px; 
+  background-color:none; 
+}
+
+.centerContent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
