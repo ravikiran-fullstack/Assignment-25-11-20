@@ -35,7 +35,7 @@ function generateData(data){
   document.getElementById('hoursElapsed').innerHTML = hours;
   let days = parseInt(hours / 24);
   document.getElementById('daysElapsed').innerHTML = days;
-  let months = parseInt(days/12);
+  let months = parseInt(days/30);
   document.getElementById('monthsElapsed').innerHTML = months;
   let years = parseInt(days/365);
   document.getElementById('yearsElapsed').innerHTML = years;
