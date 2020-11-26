@@ -33,7 +33,7 @@ function generateData(data){
   document.getElementById('minutesElapsed').innerHTML = minutes;
   let hours =parseInt( minutes / 60);
   document.getElementById('hoursElapsed').innerHTML = hours;
-  let days = parseInt(hours / 60);
+  let days = parseInt(hours / 24);
   document.getElementById('daysElapsed').innerHTML = days;
   let months = parseInt(days/12);
   document.getElementById('monthsElapsed').innerHTML = months;
