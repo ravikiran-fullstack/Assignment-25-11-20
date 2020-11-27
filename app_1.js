@@ -4,19 +4,19 @@ let len = 8;
 let hasUniqueDigits = true;
 let randomNumberGenerated = 0;
 
-function generateRandomNumber(){
+function generateRandomNumberApproach1(){
   randomNumberGenerated = Math.ceil(Math.random() * 100000000);//81463795;
   randomNumberGenerated = ""+randomNumberGenerated;
   if(randomNumberGenerated.length !== 8){
     hasUniqueDigits = true;
-    return generateRandomNumber();  
+    return generateRandomNumberApproach1();  
   }
   let result = checkHasUniqueDigits(0);
   hasUniqueDigits = true;
   if(!result){
-    return generateRandomNumber();
+    return generateRandomNumberApproach1();
   }
-  document.getElementById('randomNumber').innerHTML = randomNumberGenerated;
+  document.getElementById('randomNumber1').innerHTML = randomNumberGenerated;
   // console.log(randomNumberGenerated);
   event.preventDefault();
 }
@@ -51,3 +51,15 @@ function isUniqueDigit(_index2){
   return isUniqueDigit(_index2);
 }
 
+function generateRandomNumberApproach2(){
+  let random = Math.ceil(Math.random() * 100000000);
+  let randomStr = ""+random;
+  let randomStrArr = randomStr.split('');
+  let randomStrSet = new Set(randomStrArr);
+  
+  if(randomStrSet.size !== 8){
+    return generateRandomNumberApproach2();
+  }
+  document.getElementById('randomNumber2').innerHTML = random;
+  event.preventDefault();
+}
